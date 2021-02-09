@@ -15,6 +15,7 @@
 		BAE6250F25D1637C00265EC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE6250D25D1637C00265EC9 /* LaunchScreen.storyboard */; };
 		BAE6251A25D1637C00265EC9 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6251925D1637C00265EC9 /* WorldTrotterTests.swift */; };
 		BAE6252525D1637C00265EC9 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6252425D1637C00265EC9 /* WorldTrotterUITests.swift */; };
+		BAE6253925D16AEF00265EC9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6253825D16AEF00265EC9 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BAE6252025D1637C00265EC9 /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE6252425D1637C00265EC9 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		BAE6252625D1637C00265EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE6253825D16AEF00265EC9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				BAE6250225D1637B00265EC9 /* AppDelegate.swift */,
 				BAE6250425D1637B00265EC9 /* SceneDelegate.swift */,
 				BAE6250625D1637B00265EC9 /* MainViewController.swift */,
+				BAE6253825D16AEF00265EC9 /* MapViewController.swift */,
 				BAE6250825D1637B00265EC9 /* Main.storyboard */,
 				BAE6250B25D1637C00265EC9 /* Assets.xcassets */,
 				BAE6250D25D1637C00265EC9 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				BAE6250725D1637B00265EC9 /* MainViewController.swift in Sources */,
 				BAE6250325D1637B00265EC9 /* AppDelegate.swift in Sources */,
 				BAE6250525D1637B00265EC9 /* SceneDelegate.swift in Sources */,
+				BAE6253925D16AEF00265EC9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
