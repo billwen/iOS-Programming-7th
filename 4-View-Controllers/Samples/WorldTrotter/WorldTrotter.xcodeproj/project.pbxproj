@@ -10,7 +10,7 @@
 		BAE6250325D1637B00265EC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6250225D1637B00265EC9 /* AppDelegate.swift */; };
 		BAE6250525D1637B00265EC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6250425D1637B00265EC9 /* SceneDelegate.swift */; };
 		BAE6250725D1637B00265EC9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6250625D1637B00265EC9 /* MainViewController.swift */; };
-		BAE6250A25D1637B00265EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE6250825D1637B00265EC9 /* Main.storyboard */; };
+		BAE6250A25D1637B00265EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE6250825D1637B00265EC9 /* Main.storyboard */; settings = {ASSET_TAGS = (First, ); }; };
 		BAE6250C25D1637C00265EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE6250B25D1637C00265EC9 /* Assets.xcassets */; };
 		BAE6250F25D1637C00265EC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE6250D25D1637C00265EC9 /* LaunchScreen.storyboard */; };
 		BAE6251A25D1637C00265EC9 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE6251925D1637C00265EC9 /* WorldTrotterTests.swift */; };
@@ -193,6 +193,9 @@
 		BAE624F725D1637B00265EC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					First,
+				);
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
