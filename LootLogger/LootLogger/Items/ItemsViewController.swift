@@ -13,6 +13,12 @@ class ItemsViewController: UITableViewController {
     
     var _isEditing = false
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -82,7 +88,13 @@ class ItemsViewController: UITableViewController {
         }
     }
     
-    @IBAction func addNewItem(_ sender: UIButton) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
+    }
+    
+    @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         /*
         // make a new index path for the 0th section, last row
         let lastRow = tableView.numberOfRows(inSection: 0)
