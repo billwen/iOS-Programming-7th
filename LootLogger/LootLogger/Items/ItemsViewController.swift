@@ -16,6 +16,10 @@ class ItemsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+//        self.tableView.rowHeight = 65
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 65
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,14 +30,20 @@ class ItemsViewController: UITableViewController {
 //        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
         
         // Get a new or recycled cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
         
         // set the text on the cell iwth the description of the item that is at the nth index of items,
         // where n = row this cell
         let item = itemStore.allItems[indexPath.row]
         
+        /*
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "$ \(item.valueInDollars)"
+ */
+        cell.nameLabel.text = item.name
+        cell.serialNumberLabel.text = item.serialNumber!
+        cell.valueLabel.text = "$\(item.valueInDollars)"
         
         return cell
     }

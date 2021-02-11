@@ -44,29 +44,49 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="tY3-Kf-Npk" detailTextLabel="YLM-PS-aIG" style="IBUITableViewCellStyleValue1" id="TVB-uR-VHZ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="80" id="kck-qQ-dna" customClass="ItemCell" customModule="LootLogger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TVB-uR-VHZ" id="bWZ-Va-WJG">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kck-qQ-dna" id="5c8-6n-aIQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tY3-Kf-Npk">
-                                            <rect key="frame" x="20" y="12" width="33" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofv-qJ-3ZH" userLabel="MoneyLabel">
+                                            <rect key="frame" x="342" y="29.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YLM-PS-aIG">
-                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWE-t8-jNU" userLabel="NameLabel">
+                                            <rect key="frame" x="30" y="16" width="41.5" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DO-fO-DP6" userLabel="SNLabel">
+                                            <rect key="frame" x="30" y="47" width="31" height="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" systemColor="systemGray4Color"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jWE-t8-jNU" firstAttribute="top" secondItem="5c8-6n-aIQ" secondAttribute="topMargin" constant="5" id="2GN-Qd-hFl"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ofv-qJ-3ZH" secondAttribute="trailing" constant="10" id="2Ye-bP-jlC"/>
+                                        <constraint firstItem="5DO-fO-DP6" firstAttribute="top" secondItem="jWE-t8-jNU" secondAttribute="bottom" constant="10" id="3gb-iJ-BLo"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jWE-t8-jNU" secondAttribute="trailing" constant="160" id="4VL-4n-5Pi"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5DO-fO-DP6" secondAttribute="bottom" constant="5" id="BkA-Py-2ya"/>
+                                        <constraint firstItem="Ofv-qJ-3ZH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jWE-t8-jNU" secondAttribute="trailing" constant="20" id="GJS-BF-Qg2"/>
+                                        <constraint firstItem="jWE-t8-jNU" firstAttribute="leading" secondItem="5c8-6n-aIQ" secondAttribute="leadingMargin" constant="10" id="U0d-BR-ET6"/>
+                                        <constraint firstItem="5DO-fO-DP6" firstAttribute="leading" secondItem="5c8-6n-aIQ" secondAttribute="leadingMargin" constant="10" id="Ymw-KV-A7R"/>
+                                        <constraint firstItem="Ofv-qJ-3ZH" firstAttribute="centerY" secondItem="5c8-6n-aIQ" secondAttribute="centerY" id="o5h-qN-gaM"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="jWE-t8-jNU" id="AaA-Jg-vcb"/>
+                                    <outlet property="serialNumberLabel" destination="5DO-fO-DP6" id="oHE-Ve-n36"/>
+                                    <outlet property="valueLabel" destination="Ofv-qJ-3ZH" id="vIX-df-gHu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -77,12 +97,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2F-Ra-d06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="12"/>
+            <point key="canvasLocation" x="-726.08695652173924" y="11.383928571428571"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

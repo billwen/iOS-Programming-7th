@@ -28,7 +28,7 @@ class Item: Equatable {
             let randomAdjective = adjectives.randomElement()!
             let randomNoun = nouns.randomElement()!
             
-            let randomName = "\(randomAdjective) \(randomNoun)"
+            let randomName = "\(randomAdjective) \(randomNoun) \(randomAdjective) \(randomNoun)"
             let randomValue = Int.random(in: 0..<100)
             let randomNumber = UUID().uuidString.components(separatedBy: "-").first!
             
