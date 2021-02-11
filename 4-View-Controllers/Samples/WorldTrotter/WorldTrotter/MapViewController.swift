@@ -50,8 +50,8 @@ class MapViewController: UIViewController {
         var switchCtl = UISwitch()
         switchCtl.isOn = true
         self.view.addSubview(switchCtl)
-        let switchTC = switchCtl.topAnchor.constraint(equalTo: self._mapSegmentCtl.bottomAnchor, constant: 20)
-        switchTC.isActive = true
+        switchCtl.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 200).isActive = true
+        switchCtl.leadingAnchor.constraint(equalTo: poiLabel.trailingAnchor, constant: 10).isActive = true
         
         
         
