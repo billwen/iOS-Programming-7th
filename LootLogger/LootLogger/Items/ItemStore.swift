@@ -10,9 +10,25 @@ import UIKit
 class ItemStore {
     var allItems: [Item] = []
     
+    let itemArchiveURL: URL = {
+        let documentsDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = documentsDirectories.first!
+        return documentDirectory.appendingPathComponent("item.plist")
+    }()
+    
     init() {
-        for _ in 0..<5 {
-            createItem()
+
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(saveChanges), name: UIScene.didEnterBackgroundNotification, object: nil)
+        
+        // loading data
+        do {
+            let data = try Data(contentsOf: itemArchiveURL)
+            let unarchiver = PropertyListDecoder()
+            let items = try unarchiver.decode([Item].self, from: data)
+            allItems = items
+        } catch {
+            print("Error reading in saved items: \(error)")
         }
     }
     
@@ -43,5 +59,26 @@ class ItemStore {
         
         // Insert item in array at new location
         allItems.insert(movedItem, at: toIndex)
+    }
+    
+    @objc func saveChanges() -> Bool {
+        
+        print("Saving items to: \(itemArchiveURL)")
+        do {
+            let encoder = PropertyListEncoder()
+            let data = try encoder.encode(self.allItems)
+            try data.write(to: itemArchiveURL, options: [.atomic])
+            print("Save all of the items")
+        } catch let encodingError {
+            print("Error encoding allItems, \(encodingError)")
+            return false
+        }
+        
+        /*
+        let encoder = PropertyListEncoder()
+        let data = encoder.encode(self.allItems)
+        */
+        
+        return true
     }
 }
