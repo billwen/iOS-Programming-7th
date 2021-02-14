@@ -89,10 +89,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="toW-5W-Dna" userLabel="Main Stack View">
-                                <rect key="frame" x="5" y="96" width="404" height="709"/>
+                                <rect key="frame" x="5" y="96" width="404" height="714"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U9g-Ox-zUL" userLabel="Edit Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="112"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="151"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bpu-Di-us3" userLabel="Name Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="404" height="34"/>
@@ -151,29 +151,31 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7w-sV-KPk" userLabel="DateLabel">
+                                                <rect key="frame" x="0.0" y="117" width="404" height="34"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="qil-NO-XUA" appends="YES" id="Ond-RQ-YDr"/>
+                                                </connections>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="laC-5E-N8W" firstAttribute="width" secondItem="XDz-oQ-7ya" secondAttribute="width" id="PHi-WX-R8h"/>
                                             <constraint firstItem="jj7-9r-Cw2" firstAttribute="width" secondItem="XDz-oQ-7ya" secondAttribute="width" id="Xmz-ub-mPV"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="uiG-xq-z6h"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7w-sV-KPk" userLabel="DateLabel">
-                                        <rect key="frame" x="0.0" y="122" width="404" height="20.5"/>
-                                        <gestureRecognizers/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="qil-NO-XUA" appends="YES" id="Ond-RQ-YDr"/>
-                                        </connections>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="xaq-KK-Wcs">
-                                        <rect key="frame" x="0.0" y="152.5" width="404" height="556.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="xaq-KK-Wcs">
+                                        <rect key="frame" x="0.0" y="161" width="404" height="553"/>
                                     </imageView>
                                 </subviews>
+                                <variation key="heightClass=compact" axis="horizontal" distribution="fillEqually"/>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXh-Uq-urN">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="1300" width="0.0" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="camera" id="UsZ-8O-FUt">
                                         <connections>
