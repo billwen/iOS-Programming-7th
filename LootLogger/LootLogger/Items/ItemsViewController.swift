@@ -11,6 +11,8 @@ class ItemsViewController: UITableViewController {
     
     var itemStore: ItemStore!
     
+    var _imageStore: ImageStore!
+    
     var _isEditing = false
     
     required init?(coder aDecoder: NSCoder) {
@@ -62,6 +64,9 @@ class ItemsViewController: UITableViewController {
             // Remove the item from the store
             itemStore.removeItem(item)
             
+            // Remove the item's image from the image store
+            self._imageStore.deleteImage( forKey: item.itemKey )
+            
             // Also remove that row from the table view with an animation
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
@@ -82,6 +87,7 @@ class ItemsViewController: UITableViewController {
                 let item = self.itemStore.allItems[row]
                 let detailViewController = segue.destination as! DetailViewController
                 detailViewController._item = item
+                detailViewController._imageStore = self._imageStore
             }
         default:
             preconditionFailure("Unexpected segue identifier. \(segue.identifier!)")

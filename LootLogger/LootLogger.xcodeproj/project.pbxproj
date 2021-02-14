@@ -19,6 +19,7 @@
 		BA5D4BA825D40FB300ADA52E /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D4BA725D40FB300ADA52E /* ItemStore.swift */; };
 		BA5D4BB625D4B6F900ADA52E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D4BB525D4B6F900ADA52E /* ItemCell.swift */; };
 		BA5D4BBE25D4D6D300ADA52E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D4BBD25D4D6D300ADA52E /* DetailViewController.swift */; };
+		BA5D4BCF25D8B29B00ADA52E /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5D4BCE25D8B29B00ADA52E /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BA5D4BA725D40FB300ADA52E /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		BA5D4BB525D4B6F900ADA52E /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		BA5D4BBD25D4D6D300ADA52E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BA5D4BCE25D8B29B00ADA52E /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				BA5D4B9F25D406BD00ADA52E /* Item.swift */,
 				BA5D4BA725D40FB300ADA52E /* ItemStore.swift */,
 				BA5D4BB525D4B6F900ADA52E /* ItemCell.swift */,
+				BA5D4BCE25D8B29B00ADA52E /* ImageStore.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				BA5D4BA025D406BD00ADA52E /* Item.swift in Sources */,
 				BA5D4B9725D3FFE700ADA52E /* ItemsViewController.swift in Sources */,
 				BA5D4BB625D4B6F900ADA52E /* ItemCell.swift in Sources */,
+				BA5D4BCF25D8B29B00ADA52E /* ImageStore.swift in Sources */,
 				BA5D4B6425D3FF2C00ADA52E /* AppDelegate.swift in Sources */,
 				BA5D4BA825D40FB300ADA52E /* ItemStore.swift in Sources */,
 				BA5D4B6625D3FF2C00ADA52E /* SceneDelegate.swift in Sources */,
